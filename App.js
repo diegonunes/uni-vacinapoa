@@ -1,21 +1,64 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { FontAwesome5 } from '@expo/vector-icons';
+import * as Animatable from 'react-native-animatable';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import Home from './src/pages/Home';
+import Locals from './src/pages/Locals';
+import Vaccines from './src/pages/Vaccines';
+import News from './src/pages/News';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const Tab = createBottomTabNavigator();
+
+const icons = {
+  Home: {
+    name: 'home',
   },
-});
+  Vaccines: {
+    name: 'syringe',
+  },
+  Locals: {
+    name: 'map-marker-alt',
+  },
+  News: {
+    name: 'newspaper',
+  },
+};
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ color, size }) => {
+            const { name } = icons[route.name];
+            return <FontAwesome5 name={name} size={size} color={color} />;
+          },
+          tabBarStyle: {
+            height: 70,
+            paddingTop: 10,
+            paddingBottom: 10,
+            position: 'absolute',
+            bottom: 16,
+            right: 16,
+            left: 16,
+            borderRadius: 16,
+          },
+          tabBarLabelStyle: {
+            fontSize: 14,
+          },
+          tabBarInactiveTintColor: '#000',
+          headerShown: false,
+        })}
+      >
+        <Tab.Screen name='Home' component={Home} options={{ tabBarLabel: 'Início' }} />
+        <Tab.Screen name='Vaccines' component={Vaccines} options={{ tabBarLabel: 'Vacinas' }} />
+        <Tab.Screen name='Locals' component={Locals} options={{ tabBarLabel: 'Postos' }} />
+        <Tab.Screen name='News' component={News} options={{ tabBarLabel: 'Notícias' }} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
