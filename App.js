@@ -40,15 +40,16 @@ const App = () => {
             paddingTop: 10,
             paddingBottom: 10,
             position: 'absolute',
-            bottom: 16,
-            right: 16,
-            left: 16,
-            borderRadius: 16,
+            bottom: 14,
+            right: 14,
+            left: 14,
+            borderRadius: 14,
           },
           tabBarLabelStyle: {
             fontSize: 14,
           },
-          tabBarInactiveTintColor: '#000',
+          tabBarActiveTintColor: '#42B395',
+          tabBarInactiveTintColor: '#aaa',
           headerShown: false,
         })}
       >

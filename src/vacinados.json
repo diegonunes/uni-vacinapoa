@@ -1,0 +1,29 @@
+[
+  {
+    "nomeLocal": "Porto Alegre",
+    "primeiraDoseNro": 1160935,
+    "primeiraDosePor": 95.8,
+    "segundaDoseNro": 1052262,
+    "segundaDosePor": 86.9,
+    "reforcoDoseNro": 212447,
+    "populacao": 1211358
+  },
+  {
+    "nomeLocal": "Rio Grande do Sul",
+    "primeiraDoseNro": 1160935,
+    "primeiraDosePor": 95.8,
+    "segundaDoseNro": 1052262,
+    "segundaDosePor": 86.9,
+    "reforcoDoseNro": 212447,
+    "populacao": 1211358
+  },
+  {
+    "nomeLocal": "Brasil",
+    "primeiraDoseNro": 1160935,
+    "primeiraDosePor": 95.8,
+    "segundaDoseNro": 1052262,
+    "segundaDosePor": 86.9,
+    "reforcoDoseNro": 212447,
+    "populacao": 1211358
+  }
+]
