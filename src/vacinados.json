@@ -1,29 +1,26 @@
 [
   {
     "nomeLocal": "Porto Alegre",
-    "primeiraDoseNro": 1160935,
-    "primeiraDosePor": 95.8,
-    "segundaDoseNro": 1052262,
-    "segundaDosePor": 86.9,
-    "reforcoDoseNro": 212447,
+    "primeiraDoseNro": 1162337,
+    "primeiraDosePor": 96,
+    "segundaDoseNro": 1019196,
+    "segundaDosePor": 84.1,
     "populacao": 1211358
   },
   {
     "nomeLocal": "Rio Grande do Sul",
-    "primeiraDoseNro": 1160935,
-    "primeiraDosePor": 95.8,
-    "segundaDoseNro": 1052262,
-    "segundaDosePor": 86.9,
-    "reforcoDoseNro": 212447,
-    "populacao": 1211358
+    "primeiraDoseNro": 8844074,
+    "primeiraDosePor": 77.1,
+    "segundaDoseNro": 7402268,
+    "segundaDosePor": 67.2,
+    "populacao": 11466630
   },
   {
     "nomeLocal": "Brasil",
-    "primeiraDoseNro": 1160935,
-    "primeiraDosePor": 95.8,
-    "segundaDoseNro": 1052262,
-    "segundaDosePor": 86.9,
-    "reforcoDoseNro": 212447,
-    "populacao": 1211358
+    "primeiraDoseNro": 158395349,
+    "primeiraDosePor": 74.2,
+    "segundaDoseNro": 125800797,
+    "segundaDosePor": 61.1,
+    "populacao": 213317639
   }
 ]

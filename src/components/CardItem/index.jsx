@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, ContainerCard, Local, Texto } from './styles';
 
 const CardItem = ({ data }) => {
-  console.log(data);
   return (
     <Container>
       <Local>{data.nomeLocal}</Local>
