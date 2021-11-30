@@ -19,9 +19,15 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
           data={vacinados}
           renderItem={({ item }) => <CardItem data={item} />}
+          keyExtractor={(item) => Math.random() * item.length}
         />
         <Title>Últimas Notícias</Title>
-        <SliderNews showsVerticalScrollIndicator={false} data={[1, 2]} renderItem={({ item }) => <CardNews />} />
+        <SliderNews
+          showsVerticalScrollIndicator={false}
+          data={[1, 2]}
+          renderItem={({ item }) => <CardNews />}
+          keyExtractor={(item) => (Math.random() * item.length).toString()}
+        />
         <Title>Suas Doses</Title>
         <ContainerDoses>
           <SliderDoses
@@ -29,6 +35,7 @@ const Home = () => {
             showsHorizontalScrollIndicator={false}
             data={[1, 2, 3]}
             renderItem={({ item }) => <CardDoses />}
+            keyExtractor={(item) => (Math.random() * item.length).toString()}
           />
           <Icon activeOpacity={0.7}>
             <FontAwesome name='plus' size={48} color='#044A05' />
