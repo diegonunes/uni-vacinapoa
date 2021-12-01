@@ -3,6 +3,7 @@ import MapView, { Callout, Marker } from 'react-native-maps';
 import { Address, Container, Doses, MarkerContainer, Phone, Schedule, Title } from './styles';
 import * as Location from 'expo-location';
 import postos from '../../postos.json';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Locals = () => {
   const [location, setLocation] = useState(null);
@@ -20,9 +21,6 @@ const Locals = () => {
       setLocation(location);
     })();
   }, []);
-  if (location !== null) {
-    console.log(location.coords.latitude);
-  }
 
   const Map = () => {
     return (
@@ -45,8 +43,8 @@ const Locals = () => {
                 key={Math.random().toString()}
                 title={posto.title}
                 description={posto.description}
-                pinColor='#017374'
               >
+                <FontAwesome5 name='syringe' size={30} color='#017374' />
                 <Callout>
                   <MarkerContainer>
                     <Title>{posto.title}</Title>

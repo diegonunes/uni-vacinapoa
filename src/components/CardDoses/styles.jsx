@@ -11,6 +11,12 @@ export const Container = styled.View`
   border-radius: 14px;
 `;
 
-export const Title = styled.Text`
+export const VaccineTitle = styled.Text`
   color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
 `;
+
+export const VaccineDate = styled.Text``;
+
+export const VaccineName = styled.Text``;

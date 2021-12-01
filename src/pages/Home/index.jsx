@@ -5,11 +5,23 @@ import CardItem from '../../components/CardItem';
 import CardNews from '../../components/CardNews';
 import { Container, Title, SliderCard, SliderNews, SliderDoses, ContainerDoses, Icon } from './styles';
 import { FontAwesome } from '@expo/vector-icons';
+import api from '../../services/api';
 import vacinados from '../../vacinados.json';
 
 // https://api.covid19.especiaisg1.globo/api/vacina/info-pagina?format=json
 
 const Home = () => {
+  const [doses, setDoses] = useState([]);
+
+  useEffect(() => {
+    async function loadDoses() {
+      const response = await api.get('61a718bd01558c731ccbff6f/6');
+      setDoses(response.data);
+    }
+    loadDoses();
+  }, []);
+  console.log(doses);
+
   return (
     <Container>
       <ScrollView>
@@ -18,24 +30,23 @@ const Home = () => {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={vacinados}
-          renderItem={({ item }) => <CardItem data={item} />}
-          keyExtractor={(item) => Math.random() * item.length}
+          renderItem={({ item }) => (
+            <CardItem data={item} keyExtractor={(item) => (Math.random() * item.length).toString()} />
+          )}
         />
         <Title>Últimas Notícias</Title>
         <SliderNews
           showsVerticalScrollIndicator={false}
           data={[1, 2]}
-          renderItem={({ item }) => <CardNews />}
-          keyExtractor={(item) => (Math.random() * item.length).toString()}
+          renderItem={({ item }) => <CardNews keyExtractor={(item) => (Math.random() * item.length).toString()} />}
         />
         <Title>Suas Doses</Title>
         <ContainerDoses>
           <SliderDoses
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            data={[1, 2, 3]}
-            renderItem={({ item }) => <CardDoses />}
-            keyExtractor={(item) => (Math.random() * item.length).toString()}
+            data={doses}
+            renderItem={({ item }) => <CardDoses data={item} keyExtractor={(item) => String(item.id)} />}
           />
           <Icon activeOpacity={0.7}>
             <FontAwesome name='plus' size={48} color='#044A05' />

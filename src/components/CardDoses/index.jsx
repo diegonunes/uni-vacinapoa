@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Title } from './styles';
+import { Container, VaccineTitle, VaccineDate, VaccineName } from './styles';
 
-const CardDoses = () => {
+const CardDoses = ({ data }) => {
   return (
     <Container>
-      <Title>1a dose</Title>
+      <VaccineTitle>{data.vaccineType}</VaccineTitle>
+      <VaccineDate>{data.vaccineDate}</VaccineDate>
+      <VaccineName>{data.vaccineName}</VaccineName>
     </Container>
   );
 };
