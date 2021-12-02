@@ -4,6 +4,7 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   margin-top: 20px;
   padding: 0 14px;
+  margin-bottom: 90px;
 `;
 
 export const Title = styled.Text`

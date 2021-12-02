@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome5 } from '@expo/vector-icons';
-import * as Animatable from 'react-native-animatable';
 
 import Home from './src/pages/Home';
 import Locals from './src/pages/Locals';

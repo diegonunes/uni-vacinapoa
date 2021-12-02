@@ -22,8 +22,8 @@ const Home = () => {
     async function loadData() {
       const [dataDoses, dataVaccinated, dataNews] = await Promise.all([
         api.get('61a718bd01558c731ccbff6f/6'),
-        api.get('61a7efb001558c731ccc7a31'),
-        api.get('61a84dce0ddbee6f8b15ab81/1'),
+        api.get('61a7efb001558c731ccc7a31/1'),
+        api.get('61a84dce0ddbee6f8b15ab81/2'),
       ]);
       setDoses(dataDoses.data);
       setVaccinated(dataVaccinated.data);

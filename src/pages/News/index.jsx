@@ -14,7 +14,7 @@ const News = () => {
 
   useEffect(() => {
     async function loadNews() {
-      const response = await api.get('61a84dce0ddbee6f8b15ab81/1');
+      const response = await api.get('61a84dce0ddbee6f8b15ab81/2');
       setNews(response.data);
     }
     loadNews();
