@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import MapView, { Callout, Marker } from 'react-native-maps';
 import { Address, Container, Doses, MarkerContainer, Phone, Schedule, Title } from './styles';
 import * as Location from 'expo-location';
-import postos from '../../postos.json';
 import { FontAwesome5 } from '@expo/vector-icons';
+import api from '../../services/api';
 
 const Locals = () => {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [postos, setPostos] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -20,6 +21,12 @@ const Locals = () => {
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
     })();
+
+    async function getPostos() {
+      const response = await api.get('61a815750ddbee6f8b159981/2');
+      setPostos(response.data);
+    }
+    getPostos();
   }, []);
 
   const Map = () => {

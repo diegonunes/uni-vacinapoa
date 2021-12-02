@@ -8,7 +8,7 @@ const ModalLink = ({ link, title, closeModal }) => {
     <>
       <BackButton onPress={closeModal}>
         <Feather name='x' size={35} color='#fff' />
-        <Name>{title}</Name>
+        <Name numberOfLines={1}>{title}</Name>
       </BackButton>
       <WebView source={{ uri: link }} />
     </>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, Modal } from 'react-native';
+import { ScrollView, Text, Modal, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-
 import {
   Container,
   Title,
@@ -13,6 +12,7 @@ import {
   VaccineTitle,
 } from './styles';
 import ModalLink from '../../components/ModalLink';
+import logo from '../../../assets/logo.png';
 
 const Vaccines = () => {
   const [openLink, setOpenLink] = useState(false);
@@ -22,6 +22,7 @@ const Vaccines = () => {
   return (
     <Container>
       <ScrollView>
+        <Image source={logo} style={{ width: '100%', resizeMode: 'stretch', marginBottom: 14 }} />
         <Title>Vacinas aplicadas em Porto Alegre</Title>
         <VaccineContainer>
           <VaccineTitle>Astrazeneca/Oxford</VaccineTitle>

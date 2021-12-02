@@ -6,4 +6,9 @@ export const Container = styled.SafeAreaView`
   padding: 0 14px;
 `;
 
-export const Title = styled.Text``;
+export const Title = styled.Text`
+  font-size: 18px;
+  font-weight: bold;
+`;
+
+export const SliderNews = styled.FlatList``;

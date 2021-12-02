@@ -16,10 +16,10 @@ const icons = {
     name: 'home',
   },
   Vaccines: {
-    name: 'syringe',
+    name: 'info-circle',
   },
   Locals: {
-    name: 'map-marker-alt',
+    name: 'syringe',
   },
   News: {
     name: 'newspaper',
